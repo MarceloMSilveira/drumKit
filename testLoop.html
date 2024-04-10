@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reproduzir Som em Loop</title>
+</head>
+<body>
+    <audio id="som" src="./sounds/kick-bass.mp3"></audio>
+    <button onclick="playSound()">Reproduzir Som em Loop</button>
+    <button onclick="stopSound()">Parar Som</button>
+    <script>
+        let som = document.getElementById('som');
+
+        function playSound() {
+            som.loop = true; // Ativa o loop
+            som.play();
+        }
+
+        function stopSound() {
+            som.pause();
+            som.currentTime = 0;
+        }
+    </script>
+</body>
+</html>
