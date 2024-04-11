@@ -37,6 +37,15 @@ function selectSoundFile(caracter) {
     }
 }
 
+function buttonAnimate(btnIdt){
+    classBtn = "."+btnIdt;
+    var buttonPressed = document.querySelector(classBtn);
+    buttonPressed.classList.add("pressed");
+    setTimeout(function() {
+        buttonPressed.classList.remove("pressed");
+    }, 50); // 50 milissegundos (meio segundo)
+}
+
 //checking a bottom press
 var buttons = document.querySelectorAll(".drum");
 var arrayLength = buttons.length;
@@ -47,7 +56,9 @@ for (var i=0; i<arrayLength; i++){
 
 //checking key press
 document.addEventListener("keydown",function(e){
-    selectSoundFile(e.key.toLowerCase());
+    var buttonPressed = e.key.toLowerCase();
+    selectSoundFile(buttonPressed);
+    buttonAnimate(buttonPressed);
 })
 /*for (var i=0; i<arrayLength; i++){
     switch (buttons[i].innerText) {
