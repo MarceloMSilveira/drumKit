@@ -51,7 +51,10 @@ var buttons = document.querySelectorAll(".drum");
 var arrayLength = buttons.length;
 for (var i=0; i<arrayLength; i++){
     buttons[i].addEventListener("click", function () {
-        selectSoundFile(this.textContent)});
+        var buttonPressed = this.textContent;
+        selectSoundFile(buttonPressed);
+        buttonAnimate(buttonPressed);
+    });
 }
 
 //checking key press
