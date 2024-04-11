@@ -63,24 +63,3 @@ document.addEventListener("keydown",function(e){
     selectSoundFile(buttonPressed);
     buttonAnimate(buttonPressed);
 })
-/*for (var i=0; i<arrayLength; i++){
-    switch (buttons[i].innerText) {
-        case "w":
-            buttons[i].addEventListener("click", function(){
-                var sound = new Audio("./sounds/tom-1.mp3");
-                sound.play();
-            });
-            break;
-        case "a": 
-            buttons[i].addEventListener("click", function(){
-                var sound = new Audio("./sounds/tom-4.mp3");
-                sound.play();
-             });
-             break;
-        default:
-            buttons[i].addEventListener("click", function(){
-                var sound = new Audio("./sounds/crash.mp3");
-                sound.play();
-             });
-    }   
-}*/
